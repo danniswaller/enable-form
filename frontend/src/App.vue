@@ -39,7 +39,19 @@
                 if(!this.form.name||!this.form.password){
                     this.form.validatorError = "用户名或密码不能为空！";
                 }else{
-                     this.form.validatorError ="";
+                   //  this.form.validatorError ="";
+                 //   debugger
+                    var url = `/api/login?name='${this.form.name}'&password='${this.form.password}'`;
+                     console.log(url);
+                    this.$http.get(url).then( function(result){
+                      console.log(result.data.rs);
+                      if(result.data.rs){
+                          alert("登录成功！等待跳转。。");
+                      }else {
+
+                          alert("登录失败！重新输入。。");
+                      }
+                    });
 
                 }
             },
