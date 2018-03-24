@@ -9,7 +9,32 @@ import axios from 'axios'
 Vue.use(ElementUI);
 Vue.prototype.$http = axios
 Vue.config.productionTip = false;
+router.beforeEach((to, from, next) => {
+    if (to.meta.requireLogin) {
+        if (!isEmptyObj(store.state.user)) {
+            next();
 
+        } else {
+            next({
+                path: '/login',
+             query: {redirect: 'zhangccc' +
+             '' +
+             ''}
+        })
+        }
+    } else {
+        next();
+    }
+})
+
+let isEmptyObj = function (obj) {
+    for (var key in obj) {
+        return false;
+    }
+    return true;
+
+
+}
 new Vue({
     router,
     store,

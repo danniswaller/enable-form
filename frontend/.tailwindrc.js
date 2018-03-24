@@ -789,8 +789,7 @@ module.exports = {
      | `stroke-current` which sets the stroke to the current text color. This lets
      | you specify a stroke color using existing text color utilities and helps
      | keep the generated CSS file size down.
-     |
-     | Class name: .stroke-{name}
+     |     | Class name: .stroke-{name}
      |
      */
 

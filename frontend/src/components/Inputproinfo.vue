@@ -1,13 +1,16 @@
 <template>
     <div>
-    <h1>项目信息录入</h1>
+    <h1>哈哈</h1>
     </div>
 </template>
  <script>
      export  default{
          data(){
              return {}
-         }
+         },
+         props:['name']
+
+
 
      }
 

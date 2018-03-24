@@ -4,11 +4,8 @@ express.json([{type:"application/json"}])
 var router = express.Router();
 
 app.get('/api/login', (req, res) => {
-    // req.param();
-    console.log(req.query.name);
-    console.log(req.query.password );
-    console.log(req.query.name===""+'张聪');
-    if(req.query.name=='张聪'&&req.query.password=='cg'){
+
+    if(req.query.name=='张聪'&&req.query.password=='123'){
         res.send({rs:true})
     }else{
 
