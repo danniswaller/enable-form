@@ -51,7 +51,7 @@
                                let user ={name:"张聪",password:'321'};
 
                             _this.$store.commit('increment',user);
-                            _this.$router.push({path:'home',query:{name:user.name,password:user.password}});
+                            _this.$router.push({path:'home'});
                         }else {
 
                         }

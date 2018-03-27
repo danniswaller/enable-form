@@ -16,10 +16,8 @@ router.beforeEach((to, from, next) => {
 
         } else {
             next({
-                path: '/login',
-             query: {redirect: 'zhangccc' +
-             '' +
-             ''}
+                path: '/login'
+
         })
         }
     } else {

@@ -1,11 +1,11 @@
 <template>
-    <div>
-  <!--<login></login>-->
+
         <router-view/>
-    </div>
+
 </template>
 <script>
     import login from './views/login/login.vue'
+   // import style from './assets/scss/style.css'
     export  default{
           components:{login},
           data(){
@@ -14,3 +14,4 @@
     }
 
 </script>
+<style src="@/assets/scss/style.scss" lang="scss"/>
